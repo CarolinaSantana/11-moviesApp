@@ -1,0 +1,16 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">
+            MoviesApp
+        </h1>
+        <p class="lead">
+            This is a movies application
+        </p>
+    </div>
+</div>
+<div class="container">
+    <br>
+    <app-gallery *ngIf="billboard != undefined && billboard.length != 0" [movies]="billboard | slice:0:6" title="Billboard"></app-gallery>
+    <app-gallery *ngIf="populars != undefined && populars.length != 0" [movies]="populars | slice:0:6" title="Populars"></app-gallery>
+    <app-gallery *ngIf="popularsKidMovies != undefined && popularsKidMovies.length != 0" [movies]="popularsKidMovies | slice:0:6" title="Populars Kids Movies"></app-gallery>
+</div>
